@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "opencode-orchestrator"
+version = "2.0.0"
+description = "MCP server to delegate coding tasks to AI agents (OpenCode, Aider, etc.) with file-based communication, tmux monitoring, and plugin architecture"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.2.0",
+]
+
+[project.scripts]
+opencode-orchestrator = "opencode_orchestrator.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/opencode_orchestrator"]
