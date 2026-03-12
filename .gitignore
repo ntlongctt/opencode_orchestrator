@@ -41,3 +41,6 @@ htmlcov/
 
 # Local
 .tasks/
+.venv/
+.claude/
+uv.lock
